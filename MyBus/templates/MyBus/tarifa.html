@@ -1,0 +1,20 @@
+{% extends "MyBus/principal.html" %}
+
+{% load static %}{% block a %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+<h1>Tarifa</h1>
+
+<p>
+    Ingresar la tarifa
+    <br>
+    <form action=""     method="post">{%csrf_token%}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit", value="Enviar">
+    </form>
+</p>
+
+{% endblock %}
