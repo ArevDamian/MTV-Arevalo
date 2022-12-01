@@ -1,0 +1,17 @@
+{% extends "MyBus/principal.html" %}
+
+{% load static %}{% block a %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+<h1>Buscar colectivo</h1>
+
+
+<p>
+    <form action="/MyBus/buscar/"     method="get">{%csrf_token%}
+        <input type="number", nombre="Tarifa", id="Tarifa">
+        <input type="submit", value="Buscar">
+    </form>
+</p>
+
+{% endblock %}

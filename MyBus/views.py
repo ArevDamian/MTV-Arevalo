@@ -8,6 +8,14 @@ from MyBus.forms import *
 def Principal(request):
     return render(request, 'MyBus/principal.html')
 
+def busqueda(request):
+    return render(request, 'MyBus/busqueda.html')
+
+def buscar(request):
+    Tarifa=request.GET['Tarifa']
+    return HttpResponse(f'Informacion de linea {Tarifa}')
+
+
 def colectivo(request):
     if request.method == "POST":
         miFormulario = ColectivoFormulario(request.POST)  
