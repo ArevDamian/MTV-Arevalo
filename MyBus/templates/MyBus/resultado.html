@@ -1,0 +1,16 @@
+{% extends "MyBus/principal.html" %}
+
+{% load static %}{% block a %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+    Linea :{{colectivo}}
+    <br>
+    Colectivo:
+    {%for Recorrido in linea_colectivo%}
+        {{destino}}
+        <br>
+    {%endfor%}
+
+
+{% endblock %}

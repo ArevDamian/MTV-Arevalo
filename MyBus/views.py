@@ -12,9 +12,11 @@ def busqueda(request):
     return render(request, 'MyBus/busqueda.html')
 
 def buscar(request):
-    Tarifa=request.GET['Tarifa']
-    return HttpResponse(f'Informacion de linea {Tarifa}')
-
+    #algo=request.GET[Colectivo]
+    codigo = request.GET['linea_colectivo']
+    lineas_todas = Colectivo.objects.filter(linea_colectivo=codigo)
+    #return HttpResponse (f'Esta es la linea {codigo} que tiene estos destinos:')
+    return render(request, 'MyBus/resultado.html', {"colectivo":codigo, "colectivos_todos":lineas_todas})
 
 def colectivo(request):
     if request.method == "POST":

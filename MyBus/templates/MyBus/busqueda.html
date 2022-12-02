@@ -8,9 +8,9 @@
 
 
 <p>
-    <form action="/MyBus/buscar/"     method="get">{%csrf_token%}
-        <input type="number", nombre="Tarifa", id="Tarifa">
-        <input type="submit", value="Buscar">
+    <form action="/MyBus/buscar/" method="GET">{%csrf_token%}
+        <input type="text" name="linea_colectivo" id="linea_colectivo">
+        <input type="submit" value="Buscar">
     </form>
 </p>
 

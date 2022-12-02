@@ -9,6 +9,6 @@ urlpatterns = [
     path('colectivoapi/', views.colectivoApi),
     path('recorridoapi/', views.recorridoApi),
     path('tarifaapi/', views.tarifaApi),
-    path('busqueda/', views.busqueda),
+    path('busqueda/', views.busqueda, name='Buscar'),
     path('buscar/', views.buscar)
     ]   
