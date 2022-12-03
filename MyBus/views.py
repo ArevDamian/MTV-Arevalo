@@ -12,7 +12,6 @@ def busqueda(request):
     return render(request, 'MyBus/busqueda.html')
 
 def buscar(request):
-    #algo=request.GET[Colectivo]
     codigo = request.GET['linea_colectivo']
     lineas_todas = Colectivo.objects.filter(linea_colectivo=codigo)
     #return HttpResponse (f'Esta es la linea {codigo} que tiene estos destinos:')

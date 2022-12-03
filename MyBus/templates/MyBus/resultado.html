@@ -4,11 +4,12 @@
 
 <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
 
-    Linea :{{colectivo}}
+    Linea: {{colectivo}}
     <br>
-    Colectivo:
-    {%for Recorrido in linea_colectivo%}
-        {{destino}}
+    Colectivo:  
+    {%for Colectivo in colectivos_todos%}
+        {{Colectivo.numero_colectivo}}
+        {{Colectivo.linea_colectivo}}
         <br>
     {%endfor%}
 
